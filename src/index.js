@@ -14,8 +14,8 @@ app.set('views', path.join(__dirname, 'resources/views'));
 // http logger
 app.use(morgan('combined'))
 
-app.get('/', function (req, res) {
-  res.send("Fuck Me");
+app.get('/shop', function (req, res) {
+  res.render('shop');
 });
 
 app.get('/home', function (req, res) {

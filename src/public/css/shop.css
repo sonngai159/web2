@@ -1,0 +1,223 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;600;700;800&display=swap');
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+.bar a{
+    font-size: 15px;
+}
+.bar{
+    padding: 110px 0 1rem 1rem ;
+}
+
+/*===== DROP DOWN =====*/
+.filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom:2rem; 
+    font-family: 'Jost' !important;
+}
+.filler__icon{
+    font-size:1.5rem;
+    position: relative;
+    padding-top:.5rem;
+    -webkit-text-stroke: .7px white;
+}
+.sort{
+    font-size:15px;
+}
+.sort__icon{
+    cursor:pointer;
+    width:140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px 6px 15px;
+    border:1px solid #dadada;
+}
+.sort__dropdown{
+    width:140px;
+    position:absolute;
+    top:11.7rem;
+    border:1px solid #dadada;
+    margin-top:0.5rem;
+    display:none;
+    background-color: #ffffff;
+    font-size:13px;
+    padding-left: 1rem;
+}
+.dropdown__show{
+    display: flex;
+    flex-direction: column;
+
+}
+.option{
+    margin:.5rem 0;
+}
+
+/*===== SHOP PRODUCT =====*/
+.best__seller{
+    margin: 0 2.5%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:3rem;
+}
+.best__seller__title{
+    font-size:1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:5%;
+}
+.product__button{
+    border:1px solid grey;
+    border-radius: 3px;
+    height:2.5rem;
+    position: relative;
+    top:-1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: 'Jost';
+    font-size:15px;
+    font-weight:600;
+}
+.product__button a{
+    text-decoration: none;
+    color:black;
+    font-weight:600;
+}
+.product__bottom{
+    text-align: center;
+    position: relative;
+    top:-1.5rem;
+}
+.product__name{
+    font-family: 'Jost', 'Ariel',sans-serif;
+    font-weight:500;
+    font-size:16px;
+}
+.product__price{
+    font-family: 'Jost', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:red;
+}
+
+/*===== ASK =====*/
+.ask{
+    position: relative;
+}
+.ask__content{  
+    color:#000000;
+    padding: 2.5rem 0 0 2.5rem;
+    position: absolute;
+    top:0;
+    width:100%;
+}
+.ask__img{
+    width:100%;
+}
+.ask__content__title1{
+    font-family: 'Jost';
+    font-size:30px;
+    font-weight:600;
+    line-height:40px;
+}
+.ask__content__title2{
+    font-family: 'Jost';
+    font-size:18px;
+    font-weight: 600;
+    margin:.6rem 0;
+}
+.ask__content__sub{
+    font-family: 'Jost';
+    font-size:14px;
+    width:65%;
+    line-height: 1.5rem;
+}
+.ask__button{
+    width:45%;
+    background-color: #000000;
+    padding: 8px;
+    border-radius: 3px;
+    color:#ffffff;
+    margin-top:1rem;
+    font-family: 'Jost';
+    text-align: center;
+}
+
+/*===== EXPERT SAID =====*/
+.expert__said{
+    margin-top:2.5rem;
+}
+.expert__said__content{
+    font-family: 'Jost';
+    font-size: 15px;
+    text-align: center;
+}
+.ets{
+    width:94%;
+    letter-spacing: .2px;
+    line-height: 1.7rem;
+}
+.expert__said__avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+}
+.expert__said__avatar__label{
+    margin-left:1rem;
+}
+.expert__said__avatar__label1{
+    font-family: 'Jost';
+    font-size:16px;
+    font-weight:600;
+}
+.expert__said__avatar__label2{
+    font-family: 'Jost';
+    font-size:15px;
+    color:grey;
+}
+.slick-slide {
+    margin: 0 10px;
+} 
+
+/*===== Recently Viewed =====*/
+.recently__viewed{
+    width: 100%;
+    margin-top: 5rem;
+    border-top: 4px solid #CDF0EA;
+}
+.recently__viewed__title{
+    font-family: 'Jost';
+    font-size:24px;
+    font-weight:600;
+    text-align: center;
+    margin: 2rem 0;
+}
+.recently__viewed .slick-dots{
+    position: relative;
+    top:-1rem;
+}
+
