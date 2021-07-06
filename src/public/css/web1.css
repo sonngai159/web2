@@ -1,0 +1,471 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;600;700;800&display=swap');
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+  }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #0E2431;
+    margin: 0;
+}
+h1,h2,p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*=*=*=*BODY*=*=*=*/
+
+/*====== SECTION ======*/
+@media screen and (min-width: 768px){
+    .section{
+        width:95%;
+        margin: 0 2.5%;
+    }
+}
+/*======PROMO======*/
+.promo{
+    background-color:#ffcc00;
+    width:100%;
+    height:45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight:600;
+    font-size:15px;
+    font-family: 'Jost', sans-serif;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:100;
+}
+/*======HEADER======*/
+.header{
+  width: 100%;
+  height:50px;
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  background-color:#fff;
+  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  display: flex;
+  align-items: center;
+  top:45px;
+}
+.nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    padding-right:1rem;
+}
+@media screen and (max-width: 768px){
+    .nav__menu{
+      position: fixed;
+      top: 5.95rem;
+      left: -100%;
+      width: 80%;
+      height: 100%;
+      padding: 2rem;
+      background-color: #0E2431;
+      transition: .5s;
+    }
+}
+.nav__item{
+    margin-bottom: 2rem;
+    
+}
+.nav__link{
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+}
+.nav__link:hover{
+    position: relative;
+}
+.nav__toggle{
+    font-size:2.3rem;
+    -webkit-text-stroke: 1px white;
+    cursor: pointer;
+}
+.nav__shop,.nav__search,.nav__user{
+    display: flex;
+    justify-content: center;
+    font-size:1.8rem;
+    -webkit-text-stroke: 1px white;
+    padding-left: 2rem;
+    display: inline-block;
+}
+/*Active menu*/
+.active::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: #4070F4;
+}
+
+/*=====SHOW MENU=====*/
+.show{
+    left:0;
+}
+/*=====BIA=====*/
+.bia{
+    position: relative;
+    margin-top:90px;
+}
+.bia__title{
+    font-size:1.5rem;
+    font-weight:600;
+    font-family: 'Jost';
+    font-size:28px;
+}
+.bia__price{
+    font-weight: 600;
+    font-family: 'Jost';
+    font-size:18px;
+}
+.bia__sub{
+    font-size:.8rem;
+    font-family: 'Jost';
+    font-size:14px;
+    font-weight: 300;
+}
+.bia .text{
+    position: absolute;
+    top:10rem;
+    left:2.5rem;
+}
+.text-1{
+    color:#fff;
+    margin-bottom: 1.3rem;
+    line-height: 1.5rem;
+}
+.bia__button{
+    width:10rem;
+    height:2.5rem;
+    font-weight: 600;
+    font-size:1rem;
+}
+
+/*====== BOX-3 ======*/
+.box-3{
+    background-color: #f5f5f5;
+    margin:35px 2.5%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    width:95%;
+    justify-content:space-between;
+    align-items: center;
+}
+.box{
+    padding:40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box__icon{
+    font-size: 4rem;
+    -webkit-text-stroke: 3px white; /* giảm nét của icon lấy từ icon box */
+    width:20%;
+    display: flex !important;
+    justify-content:center;
+    align-items: center;
+}
+.box__text{
+    width:80%;
+    line-height: 1.8rem;
+}
+.box__text1{
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom: 10px;
+}
+.box__text2{
+    font-size:0.9rem;
+}
+.box__text3{
+    font-size:0.8rem;
+}
+/*===== BANNER1 =====*/
+@media screen and (max-width:375px){
+    .banner1{
+        height:23rem;
+    }
+}
+.banner1__text{
+    position: relative;
+    top:-18rem;
+    left:2rem;
+    width:90%;
+}
+.banner1__title{
+    font-family: 'Jost', sans-serif;
+    font-weight:600;
+    font-size:1.8rem;
+    margin-bottom: .5rem;
+}
+.banner1__price{
+    font-family: 'Jost', sans-serif;
+    font-weight:600;
+    letter-spacing: 2px;
+    margin-bottom: .5rem;
+}
+.banner1__sub{
+    font-family: 'Jost';
+}
+.banner1__button{
+    border:1px solid black;
+    border-radius:3px;
+    width:10rem;
+    height:2.5rem;
+    background-color:#232323;
+    color:white;
+    font-family: 'Jost';
+    font-weight:500;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:-16rem;
+    left:2rem;
+}
+
+/*=====BEST SELLER=====*/
+.best__seller{
+    margin: 0 2.5%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:3rem;
+}
+.best__seller__title{
+    font-size:1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:5%;
+}
+.product__button{
+    border:1px solid grey;
+    border-radius: 3px;
+    height:2.5rem;
+    position: relative;
+    top:-1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: 'Jost';
+    font-size:15px;
+    font-weight:600;
+}
+.product__button a{
+    text-decoration: none;
+    color:black;
+    font-weight:600;
+}
+.product__bottom{
+    text-align: center;
+    position: relative;
+    top:-1.5rem;
+}
+.product__name{
+    font-family: 'Jost', 'Ariel',sans-serif;
+    font-weight:500;
+    font-size:16px;
+}
+.product__price{
+    font-family: 'Jost', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:red;
+}
+.xemthem{
+    width:15rem;
+    height:2.5rem;
+    border:1px solid black;
+    border-radius: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    letter-spacing: 2px;
+}
+
+/*===== TRA GOP =====*/
+/* dùng class chung với banner 1 */
+@media screen and (max-width: 378px) {
+    .tragop{
+        height:400px;
+    }
+}
+
+
+/*===== WHERE 2 RIDE =====*/
+.where2ride{
+    background-color: #72d1c6;
+    font-family:'Jost';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:3rem;
+
+}
+.where2ride__title{
+    font-family:'Jost';
+    font-size:38px;
+    font-weight:600;
+    position: relative;
+    top:-2rem;
+}
+.where2ride__sub{
+    font-family:'Jost';
+    font-size:18px;
+    font-weight:400;
+    text-align: center;
+    position: relative;
+    top:-1.5rem;
+}
+.carousel{
+    width:95%;
+}
+.carousel__text{
+    background-color: white;
+    margin-bottom:2rem;
+    padding: 25px 10px;
+}
+.carousel__text1{
+    font-family:'Jost';
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+.carousel__text2{
+    font-family:'Jost';
+    font-size:15px;
+}
+.carousel__button{
+    width:auto;
+    border:1px solid black;
+    border-radius: 3px;
+    background-color:#202020;
+    color:white;
+    height:20%;
+    font-family: 'Jost';
+    font-size:15px;
+    padding:13px 3rem 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-slide {
+    margin: 0 10px;
+}
+.slick-dots{
+    background-color: #72d1c6;
+    position: relative !important;
+    top:-1rem;
+}
+.slick-track{
+    margin:0 !important;
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0 !important;
+}
+
+/*===== CUSTOMER =====*/
+.customer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer__carousel{
+    width:95%;
+}
+.cus{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.customer__title{
+    font-family: 'Jost';
+    font-size:24px;
+    font-weight:600;
+    text-align: center;
+    padding-top:2rem;
+}
+.customer__sub{
+    font-family: 'Jost';
+    font-size:16px;
+    text-align: center;
+    padding-top:1rem;
+    padding-bottom:2rem;
+    line-height: 2rem;
+}
+.star{
+    letter-spacing: 5px;
+    margin:1rem 0 1rem 0;
+    font-size:1.5rem;
+}
+.customer__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost';
+    font-size:16px;
+    text-align: center;
+}
+.customer__said{
+    margin: 0 0 15px;
+    line-height: 2rem;
+}
+.customer .slick-dots{
+    background-color: white;
+    margin-top:1rem;
+}
+
+

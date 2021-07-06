@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const handlebars  = require('express-handlebars');
 const app = express()
  
+app.use(express.static(path.join(__dirname,'public')));
 app.engine('hbs', handlebars({
   extname : '.hbs'
 }));
