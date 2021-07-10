@@ -35,7 +35,7 @@
                 <i class='bx bx-chevron-down sort__down'></i>
             </div>
             <div class="sort__dropdown" id="sort-dropdown-id">
-                <p class="option">Feature</p>
+                <p class="option" onclick="location.href='/shop/htl'">Feature</p>
                 <p class="option">Price, low to high</p>
                 <p class="option">Price, high to low</p>
                 <p class="option">Best selling</p>
@@ -47,54 +47,20 @@
     <section class="best__seller">
         <p class="best__seller__title">Best Seller</p>
         <div class="product">
+            {{#each rows}}
             <div class="product1 pro">
                 <div class="product__body">
-                    <img src="/img/product1.jpeg" alt="">
+                    <img src="{{this.product_dir}}" alt="">
                     <div class="product__button">
                         <a href="#">ADD TO CART</a>
                     </div>
                 </div>
                 <div class="product__bottom">
-                    <p class="product__name">Ariel Sinaloa</p>
-                    <p class="product__price">$400</p>
+                    <p class="product__name">{{this.product_name}}</p>
+                    <p class="product__price">${{this.product_price}}</p>
                 </div>
             </div>
-            <div class="product2 pro">
-                <div class="product__body">
-                    <img src="/img/product2.jpeg" alt="">
-                    <div class="product__button">
-                        <a href="#">ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="product__bottom">
-                    <p class="product__name">Ariel Sinaloa</p>
-                    <p class="product__price">$500</p>
-                </div>
-            </div>
-            <div class="product3 pro">
-                <div class="product__body">
-                    <img src="/img/product3.jpeg" alt="">
-                    <div class="product__button">
-                        <a href="#">ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="product__bottom">
-                    <p class="product__name">Ariel Sinaloa</p>
-                    <p class="product__price">$300</p>
-                </div>
-            </div>
-            <div class="product4 pro">
-                <div class="product__body">
-                    <img src="/img/product4.jpeg" alt="">
-                    <div class="product__button">
-                        <a href="#">ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="product__bottom">
-                    <p class="product__name">Ariel Sinaloa</p>
-                    <p class="product__price">$700</p>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </section>
 

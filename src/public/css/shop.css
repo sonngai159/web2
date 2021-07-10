@@ -64,6 +64,7 @@ a{
 }
 .option{
     margin:.5rem 0;
+    cursor: pointer;
 }
 
 /*===== SHOP PRODUCT =====*/

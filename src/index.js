@@ -1,4 +1,5 @@
-var path = require('path');
+const path = require('path');
+const mysql = require('mysql');
 const express = require('express');
 const morgan = require('morgan');
 const handlebars  = require('express-handlebars');
@@ -13,6 +14,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({
   extended: true
 }));
+app.use(express.json());
 app.engine('hbs', handlebars({
   extname : '.hbs'
 }));
@@ -21,6 +23,7 @@ app.set('views', path.join(__dirname, 'resources/views'));
 
 // http logger
 app.use(morgan('combined'))
+// connect db
 
 // function route của index.js route 
 routefunction(app);

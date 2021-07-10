@@ -93,3 +93,4 @@ $('.recently__viewed__product').slick({
     ]
 });
 
+
