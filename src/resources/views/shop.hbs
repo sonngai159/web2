@@ -28,16 +28,46 @@
 
     <!-- ===== FILTER ===== -->
     <div class="filter">
-        <i class='bx bx-filter-alt filler__icon'></i>
+        <i class='bx bx-filter-alt filler__icon' id='filter-icon'></i>
+        <div class='filter__menu' id='filter-menu'>
+            <div class='filter__menu__left'>
+                <i class='bx bx-x cancel__filter' id='cancel-filter'></i>
+                <div class='category'>
+                    <p class='category__title'>CATEGORIES</p>
+                    <div class='products'>
+                        <div class='products__title'>
+                            <p class='products__label'>PRODUCTS</p>  
+                        </div>
+                        <div class='products__li'>
+                            <p>Shirts</p>
+                            <p>Pants</p>
+                            <p>Shoes</p>
+                        </div>
+                    </div>
+                    <div class='brands'>
+                        <div class='brands__title'>
+                            <p class='brands__label'>BRANDS</p>  
+                        </div>
+                        <div class='brands__li'>
+                            <p>Balenciaga</p>
+                            <p>Gucci</p>
+                            <p>Adidas</p>
+                            <p>Nike</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='filter__menu__right'></div>
+        </div>
         <div class="sort" id="sort-id">
-            <div class="sort__icon" id="sort-icon">
+            <div class="sort__icon" id="sort-icon"> 
                 <p class="sort__label">Sort By</p>
                 <i class='bx bx-chevron-down sort__down'></i>
             </div>
             <div class="sort__dropdown" id="sort-dropdown-id">
-                <p class="option" onclick="location.href='/shop/htl'">Feature</p>
-                <p class="option">Price, low to high</p>
-                <p class="option">Price, high to low</p>
+                <p class="option">Feature</p>
+                <p class="option" id='lth'>Price, low to high</p>
+                <p class="option" id='htl'>Price, high to low</p>
                 <p class="option">Best selling</p>
             </div> 
         </div>
@@ -192,6 +222,8 @@
     </section>
    
 
+
     <script src="/js/shop.js"></script>
+
 </body>
 </html>

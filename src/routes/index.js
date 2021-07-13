@@ -7,7 +7,8 @@ function routefunction(app){
        route đã use ở ShopRoute.js chứ không phải là cái 
        const route = express.Router(); 
     */ 
-    app.use('/shop', route);
+       
+    
     app.use('/shop', route);
     app.use('/', siteroute);
 };

@@ -11,6 +11,31 @@ const showSort = (sorticonid,dropdownid) =>{
 }
 showSort('sort-icon','sort-dropdown-id');
 
+const showFilter = (filtericon,filtermenu) =>{
+    const filter = document.getElementById(filtericon),
+    dropdown = document.getElementById(filtermenu);
+
+    if( filtericon && filtermenu ){
+        filter.addEventListener('click',()=>{
+            dropdown.classList.add('show');
+        })
+    }
+}
+showFilter('filter-icon','filter-menu');
+
+const cancelFilter = (cancelfiltericon,filtermenu) =>{
+    const cancelfilter = document.getElementById(cancelfiltericon),
+    dropdown = document.getElementById(filtermenu);
+
+    if( cancelfiltericon && filtermenu ){
+        cancelfilter.addEventListener('click',()=>{
+            dropdown.classList.remove('show');
+        })
+    }
+}
+
+cancelFilter('cancel-filter','filter-menu');
+
 /* EXPERT SAID SLICK SLIDER */
 $('.expert__said').slick({
     dots: true,
@@ -93,4 +118,52 @@ $('.recently__viewed__product').slick({
     ]
 });
 
+function lowtohigh(id){
+    var idbt = document.getElementById(id);
+    idbt.addEventListener('click', function(){
+        var loc = location.href;
+        if(loc.indexOf("?sort") === -1){
+            location.href = loc + "?sort=lth";
+        }else{
+            var url = new URL(location.href);
+            var search_params = url.searchParams;
+            search_params.set('sort', 'lth');
+            console.log(url);
+            location.href=url.href;
+        }
+            
+    }); 
+}
+lowtohigh('lth');
 
+function hightolow(id){
+    var idbt = document.getElementById(id);
+    idbt.addEventListener('click', function(){
+        var loc = location.href;
+        if(loc.indexOf("?sort") === -1){
+            location.href = loc + "?sort=htl";
+        }else{
+            var url = new URL(location.href);
+            var search_params = url.searchParams;
+            search_params.set('sort', 'htl');
+            console.log(url);
+            location.href=url.href;
+        }
+            
+    }); 
+}
+hightolow('htl');
+
+/* 
+var idbt = document.getElementById(id);
+idbt.addEventListener('click', function(){
+    var loc = location.href;
+    if (loc.indexOf("?sort") === -1){
+        loc += "?sort=lth";
+    }else{
+        var url = new URL(location.href);
+        var search_params = url.searchParams;
+        search_params.set('sort', 'lth');
+    }
+}); 
+*/
