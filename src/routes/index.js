@@ -1,15 +1,9 @@
-const route = require('./ShopRoute');
-const siteroute = require('./SiteRoute');
+const express = require('express');
+const app = express();
 function routefunction(app){
       
-   
-    /* này chưa hiểu lắm: tại sao route ở đâu lại là cái
-       route đã use ở ShopRoute.js chứ không phải là cái 
-       const route = express.Router(); 
-    */ 
-       
-    
-    app.use('/shop', route);
-    app.use('/', siteroute);
+    require('./ShopRoute')(app);
+    require('./SiteRoute')(app);
+
 };
 module.exports = routefunction;

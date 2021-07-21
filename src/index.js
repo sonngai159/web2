@@ -1,5 +1,4 @@
 const path = require('path');
-const mysql = require('mysql');
 const express = require('express');
 const morgan = require('morgan');
 const handlebars  = require('express-handlebars');

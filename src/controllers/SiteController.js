@@ -1,7 +1,8 @@
+const mysql = require('mysql');
 class SiteController{
-    // get 
-    index(req,res){
+    siteControl(req,res){
         res.render('home');
     };
-};
+}
 module.exports = new SiteController;
+

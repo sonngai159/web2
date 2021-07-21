@@ -122,14 +122,18 @@ function lowtohigh(id){
     var idbt = document.getElementById(id);
     idbt.addEventListener('click', function(){
         var loc = location.href;
-        if(loc.indexOf("?sort") === -1){
+        if(loc.indexOf("?") === -1){
             location.href = loc + "?sort=lth";
         }else{
-            var url = new URL(location.href);
-            var search_params = url.searchParams;
-            search_params.set('sort', 'lth');
-            console.log(url);
-            location.href=url.href;
+            if(loc.indexOf("sort") === -1){
+                location.href = loc + "&sort=lth";
+            }else{
+                var url = new URL(location.href);
+                var search_params = url.searchParams;
+                search_params.set('sort', 'lth');
+                console.log(url);
+                location.href=url.href;
+            }
         }
             
     }); 
@@ -140,30 +144,87 @@ function hightolow(id){
     var idbt = document.getElementById(id);
     idbt.addEventListener('click', function(){
         var loc = location.href;
-        if(loc.indexOf("?sort") === -1){
+        if(loc.indexOf("?") === -1){
             location.href = loc + "?sort=htl";
         }else{
-            var url = new URL(location.href);
-            var search_params = url.searchParams;
-            search_params.set('sort', 'htl');
-            console.log(url);
-            location.href=url.href;
+            if(loc.indexOf("sort") === -1){
+                location.href = loc + "&sort=htl";
+            }else{
+                var url = new URL(location.href);
+                var search_params = url.searchParams;
+                search_params.set('sort', 'htl');
+                console.log(url);
+                location.href=url.href;
+            }
         }
             
     }); 
 }
 hightolow('htl');
 
-/* 
-var idbt = document.getElementById(id);
-idbt.addEventListener('click', function(){
-    var loc = location.href;
-    if (loc.indexOf("?sort") === -1){
-        loc += "?sort=lth";
-    }else{
-        var url = new URL(location.href);
-        var search_params = url.searchParams;
-        search_params.set('sort', 'lth');
-    }
-}); 
-*/
+
+function typetop(id){
+    var idbt = document.getElementById(id);
+    idbt.addEventListener('click', function(){
+        var loc = location.href;
+        if(loc.indexOf("?") === -1){
+            location.href = loc + "?type=top";
+        }else{
+            if(loc.indexOf("type") === -1){
+                location.href = loc + "&type=top";
+            }else{
+                var url = new URL(location.href);
+                var search_params = url.searchParams;
+                search_params.set('type', 'top');
+                console.log(url);
+                location.href=url.href;
+            }
+        }
+            
+    }); 
+}
+typetop('type-top');
+
+function typebottom(id){
+    var idbt = document.getElementById(id);
+    idbt.addEventListener('click', function(){
+        var loc = location.href;
+        if(loc.indexOf("?") === -1){
+            location.href = loc + "?type=bottom";
+        }else{
+            if(loc.indexOf("type") === -1){
+                location.href = loc + "&type=bottom";
+            }else{
+                var url = new URL(location.href);
+                var search_params = url.searchParams;
+                search_params.set('type', 'bottom');
+                console.log(url);
+                location.href=url.href;
+            }
+        }
+            
+    }); 
+}
+typebottom('type-bottom');
+
+function typeshoes(id){
+    var idbt = document.getElementById(id);
+    idbt.addEventListener('click', function(){
+        var loc = location.href;
+        if(loc.indexOf("?") === -1){
+            location.href = loc + "?type=shoes";
+        }else{
+            if(loc.indexOf("type") === -1){
+                location.href = loc + "&type=shoes";
+            }else{
+                var url = new URL(location.href);
+                var search_params = url.searchParams;
+                search_params.set('type', 'shoes');
+                console.log(url);
+                location.href=url.href;
+            }
+        }
+            
+    }); 
+}
+typeshoes('type-shoes');

@@ -39,9 +39,9 @@
                             <p class='products__label'>PRODUCTS</p>  
                         </div>
                         <div class='products__li'>
-                            <p>Shirts</p>
-                            <p>Pants</p>
-                            <p>Shoes</p>
+                            <p id='type-top'>Top</p>
+                            <p id='type-bottom'>Bottom</p>
+                            <p id='type-shoes'>Shoes</p>
                         </div>
                     </div>
                     <div class='brands'>
@@ -91,6 +91,22 @@
                 </div>
             </div>
             {{/each}}
+
+            {{#each data}}
+            <div class="product1 pro">
+                <div class="product__body">
+                    <img src="{{this.product_dir}}" alt="">
+                    <div class="product__button">
+                        <a href="#">ADD TO CART</a>
+                    </div>
+                </div>
+                <div class="product__bottom">
+                    <p class="product__name">{{this.product_name}}</p>
+                    <p class="product__price">${{this.product_price}}</p>
+                </div>
+            </div>
+            {{/each}}
+            
         </div>
     </section>
 

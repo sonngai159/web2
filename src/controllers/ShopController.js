@@ -1,7 +1,8 @@
 const mysql = require('mysql');
+const product = require('../models/ShopModel');
 class ShopController{
     // get 
-    index(req,res){
+    shopControl(req,res){
         const con = mysql.createConnection({
             host: "localhost",
             user: "root",
@@ -35,7 +36,7 @@ class ShopController{
                 con.query(sql, function(err, rows) {
                     if(!err){
                         res.render('shop',{rows});
-                        console.log("query succeed");
+                        console.log(rows);
                     }else{
                         console.log(err);
                     };       
@@ -43,6 +44,12 @@ class ShopController{
             }
         });
     };
-        
+    get_list = function(req,res){
+        product.get_all(function(data){
+            console.log(data);
+            res.render('shop',{data});
+        });
+    };
+    
 };
 module.exports = new ShopController;
